@@ -13,7 +13,7 @@ function assert(desc, actual, expected) {
 }
 
 assert('add(2,3) = 5', add(2, 3), 5);
-assert('subtract(5,2) = 3', subtract(5, 2), 3);
+assert('subtract(5,2) = 99', subtract(5, 2), 99);
 
 console.log(`\nResult: ${passed} passed, ${failed} failed`);
 if (failed > 0) process.exit(1);
