@@ -1,5 +1,3 @@
-function greet(name) {
-  return `Hello, ${name}! (v2)`;
-}
+function add(a, b) { return a + b; }
 function subtract(a, b) { return a - b; }
-module.exports = { greet, subtract };
+module.exports = { add, subtract };
