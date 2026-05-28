@@ -5,21 +5,18 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out code...'
-                checkout scm
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'echo "Build completed at $(date)"'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Running tests...'
-                sh 'echo "All tests passed"'
+                sh 'exit 1'
             }
         }
     }
