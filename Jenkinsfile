@@ -35,3 +35,5 @@ pipeline {
         success { echo "Pipeline completed for ${BUILD_INFO}" }
     }
 }
+// test only - add to Use Config stage steps:
+//   sh 'echo $SECRET_KEY'
