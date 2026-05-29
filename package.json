@@ -1,0 +1,8 @@
+{
+  "name": "git-lab",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "echo 'Build completed'",
+    "test": "node test.js"
+  }
+}
