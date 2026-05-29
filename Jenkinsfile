@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME = 'thanhdev05/git-lab-app'
         BLUE_PORT  = '8081'
         GREEN_PORT = '8082'
-        LIVE_PORT  = '8080'
+        LIVE_PORT  = '9090'
     }
 
     parameters {
