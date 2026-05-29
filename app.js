@@ -1,7 +1,3 @@
-function greet(name) {
-  return `Hello, ${name}!`;
-}
-function farewell(name) {
-  return `Goodbye, ${name}!`;
-}
-module.exports = { greet, farewell };
+function add(a, b) { return a + b; }
+function subtract(a, b) { return a - b; }
+module.exports = { add, subtract };
