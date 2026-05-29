@@ -8,14 +8,14 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'docker-compose build'
+                sh '/usr/local/bin/docker-compose build'
             }
         }
 
         stage('Deploy Compose') {
             steps {
-                sh 'docker-compose down || true'
-                sh 'docker-compose up -d'
+                sh '/usr/local/bin/docker-compose down || true'
+                sh '/usr/local/bin/docker-compose up -d'
                 sh 'sleep 5'
             }
         }
@@ -28,7 +28,7 @@ pipeline {
 
         stage('Verify Services') {
             steps {
-                sh 'docker-compose ps'
+                sh '/usr/local/bin/docker-compose ps'
                 sh 'curl http://localhost:3000'
                 sh 'curl http://localhost:3000'
                 sh 'curl http://localhost:3000'
@@ -39,8 +39,8 @@ pipeline {
     post {
         success { echo 'Multi-container deployment successful!' }
         failure {
-            sh 'docker-compose logs'
-            sh 'docker-compose down || true'
+            sh '/usr/local/bin/docker-compose logs'
+            sh '/usr/local/bin/docker-compose down || true'
         }
     }
 }
